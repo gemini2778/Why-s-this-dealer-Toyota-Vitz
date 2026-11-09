@@ -1,0 +1,12 @@
+# Reference provenance
+
+- User supplied multiview: `../public/references/multiview.png`. Primary exterior reference, originally supplied during the earlier GIF version. One side view is inconsistent/mirrored; build one coherent three-door car instead.
+- User supplied front close-up: `vitz-front-detail.png`, copied unchanged from the attached silver Vitz photograph. Used with `public/references/multiview.png` to refine the side silhouette, roof, window outlines, headlamp reflector/lens and wraparound rear clusters. Neither image is used as a vehicle billboard or baked body texture.
+- Toyota launch release, 1999-01-13: https://global.toyota/en/newsroom/toyota/24168318.html . Dimensions 3610/1660/1500 mm; wheelbase 2370 mm. Central instrument cluster, round vents and switches, two-tone seats. Used to corroborate geometry and cabin design.
+- Toyota UK 1999–2003 official interior gallery: https://media.toyota.co.uk/images/yaris-1-3-litre-interior-1999-2003/ . Discovered, but photos unavailable during this session due to maintenance/HTTP 403; do not claim visual inspection of these photos.
+- MOTA first-generation Vitz catalogue: https://autoc-one.jp/catalog/toyota/vitz/fmc632-mc2032/49389/ . Photo: https://cdn.autoc-one.jp/image/catalog/6/2/1346/632/2032/3_o.jpg . Saved as `vitz-1999-dashboard-mota.jpg` and visually inspected. Catalogue covers the 1999-start generation; the listed trim is dated 2001-12. Used for cabin proportions/layout, not exact factory trim certification. Photo belongs to its source and is a local modelling reference, not a baked material in the model.
+- Car Junction 1999 SCP10, stock 23658: https://www.carjunction.com/car-detail/toyota-vitz--yaris-1999-23658.html . Confirms RHD first-generation vehicle. Its image download returned 403; not used as an inspected modelling reference.
+
+Model: original procedural approximation made for this project. Exterior and interior are actual Three.js geometry; no third-party vehicle mesh and no photo billboard.
+
+Background music: Niko B, “Why's this dealer?”, the already selected track at `../public/audio/whys-this-dealer.mp3`; source https://www.youtube.com/watch?v=W_qNvDLDHd0 . SHA256: `08CD3A50E18D3A9F1C41D4F231B40918F7243AB128CF3D260D6BD1EBCDBA35CB`. Playback is optional, starts only on click, and loops independently of the animation. The audio and reference photographs are third-party/reference assets, separate from the original procedural geometry.

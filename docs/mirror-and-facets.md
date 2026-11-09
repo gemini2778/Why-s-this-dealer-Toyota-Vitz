@@ -1,0 +1,7 @@
+# Window-mounted mirrors and surface tessellation
+
+The supplied front photograph places each XP10 mirror on a black sail panel in the lower front corner of the door window. The previous model put the base and housing ahead of that opening. The base, support and housing now move together behind the A-pillar; the housing moves rearward by 112 mm and upward by 12 mm. Both complete base meshes and housing centres are checked against the actual side-window contour.
+
+The second issue was geometric: subdivision used distances before the nonlinear surface mapping. In the upper bonnet, a supposedly short parameter-space edge became 412 mm long on the car; windscreen-frame edges reached 77 mm. Refined regions now check mapped 3D edge lengths as well. Upper bonnet/cowl, front pillar skin and painted/rubber window frames receive local 25 mm subdivision limits, while the earlier roof-shoulder refinement remains in place. Shared-edge subdivision and separate smoothing islands are retained. Paint, lighting and the established surface profiles are unchanged.
+
+Validation: both new checks failed on the previous model and pass after repair. The complete suite is 7/7, TypeScript and production bundling pass, and the geometry audit still passes all opening/finite-coordinate checks and 241 tire-ground phases. The model contains 396 meshes and 1,751,770 triangles. Browser evidence is saved as `checks/mirror-*.png`.

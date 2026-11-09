@@ -1,0 +1,13 @@
+# XP10 floor, pedals and 1NZ-FE mechanical structure
+
+The user wants a complete visible underbody and properly mounted pedals, plus a transverse 1NZ-FE above the front axle, without disturbing the existing silver exterior, detailed cabin, optional BGM or ground-anchored squash.
+
+The old model has a short rectangular underbody, a separate flat cabin floor, two horizontal pedal blocks and only an exhaust tip. Replace those placeholders with a formed floor pan and toe board, closed firewall, wheel housings, sills/rails/crossmembers, front subframe/struts/control arms/rack/half-shafts, rear torsion beam/springs/dampers, fuel tank and routed exhaust. A shared floor profile aligns the carpet and structural panel. The automatic cabin retains two pedals: wide suspended brake and narrow accelerator with arms, brackets and rubber ribs.
+
+Add a photo-guided 1NZ-FE assembly with transverse block/head, VVT-i cover, four intake runners, exhaust shield, gearbox/differential, oil pan, belt pulleys, mounts, air cleaner/intake hose, battery, radiator/fan and reservoirs. This is a visually coherent approximation fitted to the existing model, not a factory CAD or operating engine simulation. Retain the current exterior/automatic-cabin specification rather than converting the whole car to an RS.
+
+Approach chosen by the implementer: extend the existing procedural Three.js model in separate floor/chassis/engine modules. A flat replacement plate would leave the requested mechanical structure missing; a downloaded car model would replace approved work. All new parts stay below the bonnet and share the existing ground-anchored root transform. Two optional inspection presets temporarily hide the body and cabin and permit looking under the car; ordinary presets restore the assembled car. The floor/grid are hidden only in inspection views.
+
+References: Toyota's 23 October 2000 Vitz RS release confirms the 1.5L 1NZ-FE and automatic option: https://global.toyota/en/detail/12611871 . Toyota T Sport launch/suspension information: https://media.toyota.co.uk/yaris-t-sport-first-of-a-new-performance-brand-from-toyota/ . Viewed actual NCP13 RS engine-bay photo: https://image-cdn.beforward.jp/files/pictures/201307/139287/BF144406_29.jpg (vehicle listing https://www.beforward.jp/toyota/vitz/bf144406/id/139287/).
+
+Acceptance: actual rays must hit opaque underbody panels through the previously empty front/rear areas; pedal pads face the driver and stand clear of the floor; the engine lies above the front axle inside the bonnet/side envelope; shafts and suspension meet the existing wheel locations; full-amplitude motion retains tire contact. Inspect underside, engine bay, pedals and restored exterior in the real browser. No new dependencies.

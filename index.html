@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171b1d">
+    <meta name="description" content="银色初代 Toyota Vitz，能在地面上压缩、伸展和回弹的三维小车。">
+    <title>VITZ — Motion Lab</title>
+  </head>
+  <body>
+    <main id="stage" aria-label="Vitz 三维渲染工作室"></main>
+    <header class="header">
+      <a class="brand" href="./" aria-label="Vitz Motion Lab 首页"><span class="brand-mark">V/</span><span>CAR MEMES<span class="brand-sub">MOTION LAB</span></span></a>
+      <nav aria-label="工作室导航"><span class="nav-active">3D 工作室</span><button id="show-refs" class="text-button" type="button">参考资料 <span>↗</span></button></nav>
+      <div class="session"><span class="live-dot"></span><span id="status" role="status">正在建立场景</span><span class="session-id">STUDY 004</span></div>
+    </header>
+
+    <section class="scene-caption" aria-label="车型信息">
+      <p class="eyebrow"><span class="square"></span> THE ORIGINAL LITTLE BOUNCER</p>
+      <h1>VITZ<span class="title-dot">.</span></h1>
+      <div class="model-meta"><span>TOYOTA / XP10</span><span class="meta-divider"></span><span>1999 · 3 DOOR</span></div>
+      <p class="scene-subtitle">一点银色，一点弹性。</p>
+    </section>
+    <div class="view-label"><span class="cross">+</span><span id="view-label">01 / FRONT THREE-QUARTER</span></div>
+    <div class="ground-badge"><span></span>地面接触锁定</div>
+
+    <aside class="panel" aria-label="渲染和弹跳控制">
+      <div class="panel-head"><span>变形实验</span><span class="small-mono">SQUASH / STRETCH</span></div>
+      <div class="panel-body">
+        <div class="playback">
+          <button id="play" class="play-button" type="button" aria-label="暂停弹跳" aria-pressed="true"><svg id="play-icon" width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M4 3h3v12H4zm7 0h3v12h-3z"/></svg></button>
+          <div><strong id="play-label">正在弹跳</strong><p>压扁。回弹。再来一次。</p></div>
+          <span class="wave" aria-hidden="true">⌁</span>
+        </div>
+        <section class="bgm-player" aria-label="背景音乐">
+          <div class="bgm-track-row">
+            <div class="bgm-track"><span class="small-mono">OPTIONAL BGM</span><strong>Why’s This Dealer?</strong><span id="bgm-status" role="status">Niko B · 点击播放</span></div>
+            <button id="bgm-toggle" type="button" aria-label="播放背景音乐" aria-pressed="false" aria-busy="false"><svg width="12" height="12" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path id="bgm-icon" d="M5 2.5 15 9 5 15.5z"/></svg><span id="bgm-label">播放</span></button>
+          </div>
+          <div class="bgm-volume"><label for="bgm-volume">音量</label><input id="bgm-volume" type="range" min="0" max="100" step="1" value="40" aria-label="背景音乐音量"><output id="bgm-volume-value" for="bgm-volume">40%</output></div>
+          <audio id="bgm-audio" src="./audio/whys-this-dealer.mp3" preload="none" loop></audio>
+        </section>
+        <div class="control-block">
+          <div class="label-row"><label for="amplitude">弹性幅度</label><output id="amplitude-value" for="amplitude">80<span>%</span></output></div>
+          <input id="amplitude" type="range" min="0" max="100" step="1" value="80">
+          <div class="range-captions"><span>微微一颤</span><span>果冻模式</span></div>
+        </div>
+        <div class="control-block tempo-block">
+          <div class="label-row"><label for="speed">弹跳速度</label><output id="speed-value" for="speed">1.60<span>Hz</span></output></div>
+          <input id="speed" type="range" min="0.40" max="3.20" step="0.05" value="1.60">
+          <div class="range-captions"><span>慢悠悠</span><span>停不下来</span></div>
+        </div>
+        <div class="section-label"><span>观察视角</span><span class="small-mono">CAMERA</span></div>
+        <div class="view-buttons" role="group" aria-label="相机预设">
+          <button type="button" data-view="front" aria-pressed="true"><span class="view-number">01</span>前 ¾</button>
+          <button type="button" data-view="rear" aria-pressed="false"><span class="view-number">02</span>后 ¾</button>
+          <button type="button" data-view="side" aria-pressed="false"><span class="view-number">03</span>正侧面</button>
+          <button type="button" data-view="interior" aria-pressed="false"><span class="view-number">04</span>进入内饰 <span class="arrow">↗</span></button>
+          <button type="button" data-view="chassis" aria-pressed="false"><span class="view-number">05</span>底盘结构</button>
+          <button type="button" data-view="engine" aria-pressed="false"><span class="view-number">06</span>1NZ-FE 机舱</button>
+          <button type="button" data-view="rearInterior" aria-pressed="false"><span class="view-number">07</span>后排座舱 <span class="arrow">↗</span></button>
+          <button type="button" data-view="cabinDetail" aria-pressed="false"><span class="view-number">08</span>座椅与手刹</button>
+        </div>
+        <div class="section-label lighting-label"><span>灯光氛围</span><span class="small-mono">LIGHTING</span></div>
+        <div class="lighting-buttons" role="group" aria-label="灯光预设">
+          <button type="button" data-light="studio" aria-pressed="true"><span>☼</span> 摄影棚</button>
+          <button type="button" data-light="night" aria-pressed="false"><span>☾</span> 午夜蓝</button>
+        </div>
+        <div class="utility-row">
+          <button id="rotate" type="button" aria-pressed="false"><span>↻</span> 自动环绕</button>
+          <button id="wireframe" type="button" aria-pressed="false"><span>◇</span> 查看网格</button>
+        </div>
+      </div>
+      <div class="panel-bottom"><div><span class="small-mono">BODY HEIGHT</span><strong id="height-value">100<span>%</span></strong></div><div><span class="small-mono">BODY FINISH</span><strong class="finish"><i></i> Silver</strong></div></div>
+    </aside>
+
+    <footer class="timeline">
+      <div class="timeline-head"><span><span class="timeline-dot"></span> 循环进度 <output id="phase-value" for="phase">000%</output></span><button id="neutral" type="button" class="text-button">标准姿态 <span>↺</span></button></div>
+      <input id="phase" type="range" min="0" max="1000" step="1" value="0" aria-label="循环进度">
+      <div class="timeline-ticks" aria-hidden="true"><span>00</span><span>压缩</span><span>回弹</span><span>01</span></div>
+      <div class="viewport-help"><span>拖动旋转 <i>·</i> 滚轮缩放 <i>·</i> 空格暂停</span><span id="version">THREE.JS</span></div>
+    </footer>
+    <dialog id="references" aria-labelledby="references-title">
+      <div class="dialog-header"><div><p class="eyebrow">REFERENCE BOARD</p><h2 id="references-title">从参考，到三维。</h2></div><button id="close-refs" type="button" aria-label="关闭参考资料">×</button></div>
+      <div class="reference-grid"><figure><img src="./references/multiview.png" alt="用户提供的银色三门初代 Vitz 多视角外观参考"><figcaption>01 / 你的多视角图 <span>三门车身 · 银色漆面</span></figcaption></figure><figure><img src="./references/interior.jpg" alt="初代 Vitz 右舵内饰：中置仪表、三辐方向盘和圆形出风口"><figcaption>02 / 初代 Vitz 内饰 <a href="https://autoc-one.jp/catalog/toyota/vitz/fmc632-mc2032/49389/" target="_blank" rel="noreferrer">MOTA 图库 ↗</a></figcaption><p>右舵、中置仪表与灰蓝座椅；按照片重建车厢布局。</p></figure></div>
+      <p class="reference-note">本车为依据参考制作的三维近似模型。外形采用一致的三门结构；原图中有一张反向侧视，未照搬其矛盾细节。尺寸依据 <a href="https://global.toyota/en/newsroom/toyota/24168318.html" target="_blank" rel="noreferrer">丰田 1999 年发布资料 ↗</a>。</p>
+      <p class="reference-note">动力部分参考 <a href="https://global.toyota/en/detail/12611871" target="_blank" rel="noreferrer">初代 Vitz RS 的 1NZ-FE ↗</a> 与 <a href="https://www.beforward.jp/toyota/vitz/bf144406/id/139287/" target="_blank" rel="noreferrer">实车机舱照片 ↗</a>；保留当前车身与自动挡内饰。底盘、机舱视角暂时隐藏车壳，选择普通视角即可恢复。</p>
+      <p class="reference-note">织物、手刹与三门后排侧围参考 <a href="https://media.toyota.co.uk/images/yaris-1-3-litre-interior-1999-2003/" target="_blank" rel="noreferrer">丰田初代 Yaris 内饰图库 ↗</a>；后座分区和带扣补充参考 <a href="https://www.carjunction.com/car-detail/toyota-vitz--yaris-1999-24328.html" target="_blank" rel="noreferrer">初代 Vitz 后排照片 ↗</a>。后排座舱视角可直接查看座椅与内衬。</p>
+    </dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

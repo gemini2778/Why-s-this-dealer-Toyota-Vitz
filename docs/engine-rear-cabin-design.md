@@ -1,0 +1,15 @@
+# Engine bay and rear cabin refinement
+
+The user asks for a closer photo-based 1NZ-FE shape, connected plumbing and smoother components, plus finished rear seating, seat fabric, handbrake and rear cabin details, preserving the already-approved exterior, dashboard, running gear, BGM and squash animation.
+
+Approach chosen by the implementer: refine the existing procedural assemblies within their current envelopes. Engine and rear cabin are independent geometry domains and can be developed in parallel with disjoint file ownership; the parent integrates camera, references and verification. Merely rounding the old boxes would retain the incorrect silhouette. Replacing the complete model would discard approved work. No new dependencies or downloads of replacement car models.
+
+Engine: sculpt the stepped asymmetric grey VVT-i cover and cast block/head/gearbox; four curved intake runners join a plenum and throttle body. Intake, coolant, breather/vacuum, ignition and electrical routes need visible terminals, collars/clamps and supports rather than free tube ends. Refine alternator, belt, radiator/fan, battery/tray, reservoirs and wiring clips. Keep wheel/strut/engine mount and exhaust interfaces intact, below the actual bonnet and away from the firewall and rubber tire volumes.
+
+Cabin: preserve current front-seat placement and outer silhouette while giving the fabric a muted woven pattern and soft surface response. Detail the rear bench upholstery panels, contour seams, headrest posts, rear belts/buckles, hinges and latches. Add sculpted three-door quarter trim, rear wheel-tub trim, rear footwell/carpet details, parcel shelf supports and hatch inner trim. The handbrake becomes a substantial lever with grip, release button, pivot/ratchet, gaiter and fitted console return. Keep automatic controls and the approved dashboard/steering/door trim.
+
+Add rear-cabin and seats/handbrake camera presets so the new work can be inspected. All three interior cameras follow the existing squash transform; ordinary views restore the whole car. The second new preset exposes the low handbrake between the front seats without hiding approved geometry. No seat/engine simulation is requested.
+
+References: checks/references/ncp13-engine-bay.jpg, the original 2000 TA-NCP13 RS photo https://www.beforward.jp/toyota/vitz/bf144406/id/139287/ ; checks/references/xp10-rear-bench.jpg (1999 SCP10 five-door, useful only for bench upholstery/buckle details, not door geometry) https://www.carjunction.com/car-detail/toyota-vitz--yaris-1999-24328.html ; official 1999–2003 interior gallery https://media.toyota.co.uk/images/yaris-1-3-litre-interior-1999-2003/ ; existing public/references/interior.jpg for the established RHD automatic palette. Photos guide visible form; this is a fitted visual reconstruction, not measured factory CAD.
+
+Acceptance: connection clearance and seating-envelope regressions; all current tests and production build; actual browser engine, rear cabin, handbrake, compressed interior, mechanical inspection and restored exterior. Preserve independent BGM behavior. Keep evidence under checks/.
